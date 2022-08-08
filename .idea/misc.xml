@@ -7,8 +7,10 @@
         <entry key="app/src/main/res/drawable/card_bg_light.xml" value="0.12" />
         <entry key="app/src/main/res/drawable/et_grey_bg.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/ic_calendar.xml" value="0.1465" />
+        <entry key="app/src/main/res/drawable/ic_day.xml" value="0.1245" />
         <entry key="app/src/main/res/drawable/ic_email.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/ic_form.xml" value="0.1465" />
+        <entry key="app/src/main/res/drawable/ic_night.xml" value="0.1245" />
         <entry key="app/src/main/res/drawable/ic_person.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/ic_todo.xml" value="0.1245" />
@@ -28,6 +30,7 @@
         <entry key="app/src/main/res/layout/todo_detail_item.xml" value="0.394990366088632" />
         <entry key="app/src/main/res/layout/user_item.xml" value="0.4209445585215606" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/menu/home_menu.xml" value="0.196875" />
       </map>
     </option>
   </component>

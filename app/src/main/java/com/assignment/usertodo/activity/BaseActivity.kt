@@ -3,6 +3,7 @@ package com.assignment.usertodo.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.assignment.usertodo.R
 import com.assignment.usertodo.databinding.ActivityBaseBinding
@@ -22,10 +23,15 @@ class BaseActivity : AppCompatActivity() {
 
     private var viewMode: String? = null
 
+    private var darkmode_state : Boolean = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        darkmode_state = getSharedPreferences(packageName, MODE_PRIVATE).getBoolean("darkmode", true);
+        changeThemeOnStart();
 
         auth = Firebase.auth
 
@@ -84,6 +90,14 @@ class BaseActivity : AppCompatActivity() {
                 startActivity(Intent(this@BaseActivity, HomeActivity::class.java))
                 finish()
             }
+        }
+    }
+
+    private fun changeThemeOnStart() {
+        if (darkmode_state) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
     }
 }
