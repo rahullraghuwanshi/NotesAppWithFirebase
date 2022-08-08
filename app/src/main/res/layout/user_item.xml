@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:hint="User name"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?colorOnSecondary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="sans-serif-condensed"
+            tools:text="Yash Chouhan" />
+
+        <TextView
+            android:id="@+id/txt_user_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_user_name"
+            android:layout_alignParentStart="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?colorOnSecondary"
+            app:fontFamily="sans-serif-condensed"
+            tools:text="33/33/3300" />
+
+        <TextView
+            android:id="@+id/txt_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_user_dob"
+            android:layout_alignParentStart="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?colorOnSecondary"
+            app:fontFamily="sans-serif-condensed"
+            tools:text="xyz@gmail.com" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

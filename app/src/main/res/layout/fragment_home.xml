@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_detail"
+            style="@style/CustomCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?colorOnSecondary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif-condensed"
+                tools:text="Yash Chouhan" />
+
+            <TextView
+                android:id="@+id/txt_user_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_user_name"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?colorOnSecondary"
+                app:fontFamily="sans-serif-condensed"
+                tools:text="33/33/3300" />
+
+            <TextView
+                android:id="@+id/txt_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_user_dob"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?colorOnSecondary"
+                app:fontFamily="sans-serif-condensed"
+                tools:text="xyz@gmail.com" />
+
+            <TextView
+                android:id="@+id/txt_user_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_user_email"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?colorOnSecondary"
+                app:fontFamily="sans-serif-condensed"
+                tools:text="+918333823929" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        tools:listitem="@layout/user_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

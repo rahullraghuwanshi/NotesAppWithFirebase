@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "808144982304",
+    "project_id": "usertodo-e9600",
+    "storage_bucket": "usertodo-e9600.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808144982304:android:88db1b8e5ae27e2cd04745",
+        "android_client_info": {
+          "package_name": "com.assignment.usertodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808144982304-lkuif7pib9qnh3t271f3pdm4q8mkhsr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoQOHlvW1qF9oiugRPCBOMs08FwUdowAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808144982304-lkuif7pib9qnh3t271f3pdm4q8mkhsr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?background"
+    android:padding="16dp"
+    tools:context=".fragment.AddToDoFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/ll_to_do"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_todo" />
+
+            <TextView
+                android:id="@+id/txt_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="18dp"
+                android:text="Add New Task"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#969EEE"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                app:fontFamily="casual" />
+
+            <EditText
+                android:id="@+id/et_title"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Title"
+                android:textSize="18sp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+
+            <EditText
+                android:id="@+id/et_description"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="start"
+                android:hint="Description"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLines="6"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Save"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

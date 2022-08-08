@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragment.AuthFragment">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/txt_welcome"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:text="Welcome"-->
+    <!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+    <!--        android:textColor="?colorOnSecondary"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:fontFamily="casual"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/cardView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_form" />
+
+            <TextView
+                android:id="@+id/txt_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="18dp"
+                android:text="Fill Your Details"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#969EEE"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                app:fontFamily="casual" />
+
+            <EditText
+                android:id="@+id/et_full_name"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="16dp"
+                android:hint="Full Name"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txt_date_of_birth"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:drawablePadding="16dp"
+                android:hint="Date of Birth"
+                app:drawableStartCompat="@drawable/ic_calendar" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="16dp"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/et_number"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="16dp"
+                android:hint="Mobile Number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Next"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_verfication" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="18dp"
+                android:text="Enter the Verification Code"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#969EEE"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                app:fontFamily="casual" />
+
+            <EditText
+                android:id="@+id/et_verfication_code"
+                style="@style/EditTextBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="- - - - - -"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_verify"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Verify"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
